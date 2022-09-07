@@ -1,0 +1,42 @@
+o Describe the difference between the .data and .text portions of a MIPS
+program source
+
+A data section of the source files reserves memory locations for future use in the programs
+The text section contains actual instructions that the program will execute
+
+o Explain what the main: portion of a MIPS program is for
+
+main: tells the program where to begin execution. It does not nessesarily need to be at the top
+
+o Describe what a syscall is and why they are useful
+
+A syscall is an instruction that passes control to the kernal to provide operating system-like services
+
+o Explain at least two different types of syscalls
+
+Syscall 1 prints a 32 bit integer that is found in $a0
+Syscall 4 prints a string that is found in $a0
+
+o Explain how to use different types of syscalls
+
+to use a syscall one needs to load the correct value into $v0
+For example syscall 1 requires a value of $v0 
+
+o Explain how to provide arguments to a syscall.
+
+load a value into $v0 using the li command
+
+o Explain what “syscall 10” does and why it’s important.
+
+syscall 10 exits the program gracefully. Otherwise the
+processer will continue to execute whatever random code is in memory
+
+o Explain the difference between user_input and str1
+
+str1 is a static string held in a memory address that was allocated in the data section
+user_input is 64 bit buffer space held in a memory address that was alocated in the data section
+
+o Explain what the j print_chars line does
+
+print_chars is a label which can be refered to by the program. 
+This allows the program to jump back to the given point in the program
